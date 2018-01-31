@@ -232,6 +232,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * 
+     * @param action
+     */
     private void displayResult (char action) {
         if (!Double.isNaN(valueOne)) {
             binding.infoTextView.setText(decimalFormat.format(valueOne) + action);
