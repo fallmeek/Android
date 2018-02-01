@@ -195,18 +195,20 @@ public class MainActivity extends AppCompatActivity {
                 CURRENT_ACTION = '0';
             }
         });
-//        setContentView(R.layout.activity_main);
     }
-    private void computeCalculation(){
 
-        // kiem tra text
+    /**
+     * Compute
+     */
+    private void computeCalculation(){
+        // Check old value
         if (Double.isNaN(valueOne)) {
-            // khong co gia tri cu
+            // old value is not exist
             try {
                 valueOne = Double.parseDouble(binding.editText.getText().toString());
             } catch (Exception ex) {}
         } else {
-            // co gia tri cu
+            // old value is exist
             try {
                 valueTwo = Double.parseDouble(binding.editText.getText().toString());
                 if (CURRENT_ACTION == ADDITION) {
@@ -224,6 +226,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Add text when tab on number
+     * @param tabValue text number 0-9
+     */
     private void addText(String tabValue) {
         if ("0".equals(binding.editText.getText().toString())) {
             binding.editText.setText(tabValue);
@@ -233,8 +239,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * 
-     * @param action
+     * Display result after computing
+     * @param action + - * /
      */
     private void displayResult (char action) {
         if (!Double.isNaN(valueOne)) {
@@ -243,5 +249,4 @@ public class MainActivity extends AppCompatActivity {
             CURRENT_ACTION = action;
         }
     }
-
 }
