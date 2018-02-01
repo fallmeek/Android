@@ -5,8 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-//import com.mycalculator.mycalculator.databinding.ActivityMainBinding;
-
 import com.mycalculator.mycalculator.databinding.ActivityMainBinding;
 
 import java.text.DecimalFormat;
@@ -179,6 +177,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+		// set event listener to equal button
         binding.buttonEqual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
