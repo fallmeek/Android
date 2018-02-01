@@ -205,7 +205,9 @@ public class MainActivity extends AppCompatActivity {
             // old value is not exist
             try {
                 valueOne = Double.parseDouble(binding.editText.getText().toString());
-            } catch (Exception ex) {}
+            } catch (Exception ex) {
+                // do nothing
+            }
         } else {
             // old value is exist
             try {
@@ -221,7 +223,9 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     valueOne = valueTwo;
                 }
-            } catch (Exception ex) {}
+            } catch (Exception ex) {
+                // do nothing
+            }
         }
     }
 
